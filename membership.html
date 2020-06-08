@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="style.css">
+<style>
+input[type=text], select {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+</style>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["email"].value;
+  var z = document.forms["myForm"]["address"].value;
+  var a = document.forms["myForm"]["mop"].value;
+  
+  if (x == "" || y == "" || z == "" || a == "") {
+    alert("All star textboxes should be filled! ");
+    return false;
+  }
+  else{
+  alert("Your Order is submitted Successfully!");
+  return true;
+  }
+}
+</script>
+<div class="header">
+  <img src="logo.jpeg" alt="logo" />
+  <h1>“Welcome to FitLife Fitness and Training Center!”</h1> 
+</div>
+<div class="nav">
+             <ul>
+                 <li class="hbar1"><a href = "index.html">  Home       </a></li>
+                 <li class="hbar1"><a href = "about-us.html">   About      </a></li>
+                 <li class="hbar1"><a href = "classes.html"> Classes    </a></li>
+                 <li class="hbar1"><a href = "services.html">Services   </a></li>
+				 <li class="hbar1"><a href = "membership.html">  Memberships</a></li>
+             </ul>
+        </div>
+</head>
+
+<body>
+
+
+<form name="myForm"  onsubmit="return validateForm()" method="post">
+
+<h2>Fill out for New membership </h2>
+  <label for="fname"><b>First name:*</b></label><br>
+  <input type="text" id="fname" name="fname" ><br>
+  <label for="email"><b>Email:*</b></label><br>
+  <input type="email" id="email" name="email" ><br>
+  <label for="address"><b>Address:*</b></label><br>
+  <input type="text" id="address" name="address" ><br>
+  <label for="mop"><b>Method of payment*</b></label><br>
+  <input type="radio" id="mop" name="gender" value="Credit card">
+  <label for="male"><b>Credit Card</b></label><br>
+  <input type="radio" id="mop" name="gender" value="Debit Card">
+  <label for="female"><b>Debit Card</b></label><br>
+ 
+  <label for="mem"><b>Type of membership</b></label><br>
+  <select name="Type of membership" id="mem">
+    <option value="volvo">Pay As you Go</option>
+    <option value="saab">3 months</option>
+    <option value="opel">6 months</option>
+    <option value="audi">12 months</option>
+  </select><br>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Receive Future updates regarding promotions</label><br>
+  <br><br>
+  <input type="submit" value="Submit"><br>
+  <a href="./member_details.html">To know more about Member details</a>
+
+</form>
+
+
+
+
+</body>
+</html>
+
+​	​
+	
+​	
